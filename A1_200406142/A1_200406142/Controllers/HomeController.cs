@@ -4,9 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using PetFood_Store.Models;
+using A1_200406142.Models;
 
-namespace PetFood_Store.Controllers
+namespace A1_200406142.Controllers
 {
     public class HomeController : Controller
     {
@@ -17,7 +17,7 @@ namespace PetFood_Store.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "WTF.";
+            ViewData["Message"] = "Your application description page.";
 
             return View();
         }
