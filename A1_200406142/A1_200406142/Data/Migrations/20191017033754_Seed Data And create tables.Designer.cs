@@ -4,14 +4,16 @@ using A1_200406142.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace A1_200406142.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191017033754_Seed Data And create tables")]
+    partial class SeedDataAndcreatetables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -54,8 +56,6 @@ namespace A1_200406142.Data.Migrations
 
                     b.Property<string>("Description");
 
-                    b.Property<string>("ImageUrl");
-
                     b.Property<string>("Name");
 
                     b.Property<string>("NutritionalInformation");
@@ -73,8 +73,8 @@ namespace A1_200406142.Data.Migrations
                     b.ToTable("Food");
 
                     b.HasData(
-                        new { Id = 1, AnimalId = 1, Brand = "TigerFood", Description = "Gives your cat the power of Tiger!", Name = "Real Hunter's Dinner", NutritionalInformation = "Protein: 15. Fat: 5. Tiger Meat: 101%.", Price = 12m, TypeOfAnimal = "Cat", Weight = 400m },
-                        new { Id = 2, AnimalId = 2, Brand = "Wolfenstein", Description = "The food, the secret of the recipe of which is kept in Germany, contains all the necessary elements for a healthy dog nutrition.", Name = "Wolf Mittagessen", NutritionalInformation = "Protein: 20, Fat: 10, Secret Ingridient B418/2918, Secret Ingridient 'Wolfenstein'", Price = 30m, TypeOfAnimal = "Dog", Weight = 1300m }
+                        new { Id = 1, AnimalId = 1, Brand = "TigerFood", Description = "Gives your cat the power of Tiger!", Name = "Real Hunter's Dinner", NutritionalInformation = "Protein: 15. Fat: 5. Tiger Meat: 101%.", Price = 12m, Weight = 400m },
+                        new { Id = 2, AnimalId = 2, Brand = "Wolfenstein", Description = "The food, the secret of the recipe of which is kept in Germany, contains all the necessary elements for a healthy dog nutrition.", Name = "Wolf Mittagessen", NutritionalInformation = "Protein: 20, Fat: 10, Secret Ingridient B418/2918, Secret Ingridient 'Wolfenstein'", Price = 30m, Weight = 1300m }
                     );
                 });
 

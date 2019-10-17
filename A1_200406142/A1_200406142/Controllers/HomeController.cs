@@ -29,6 +29,13 @@ namespace A1_200406142.Controllers
             return View();
         }
 
+        public IActionResult Example (String Genre)
+        {
+            ViewData["Message"] = "You entered Genre: " + Genre;
+                return View();
+
+        }
+
         public IActionResult Privacy()
         {
             return View();

@@ -1,0 +1,18 @@
+﻿@model IEnumerable<A1_200406142.Models.Food>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Welcome to Canadian Pet Food Store!</h2>
+
+
+@foreach (var item in Model)
+{
+
+    <div>
+        <img src="@item.ImageUrl" />
+        <p class="FoodName">@Html.DisplayFor(modelItem => item.Name)</p>
+        <p class="FoodPrice">@Html.DisplayFor(modelItem => item.Price)</p>
+    </div>
+} 
